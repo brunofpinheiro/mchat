@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML 5 Boilerplate</title>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <!-- <link href="https://unpkg.com/bonsai.css@latest/dist/bonsai.min.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
+  </head>
+  <body class="container">
+	  <script src="index.js"></script>
+    <header>
+      <h1>Escala Modified Checklist for Autism in Toddlers (M-CHAT)</h1>
+    </header>
+
+    <section>
+      <form id="formQuestions">
+        <fieldset>
+          <a>1 - Gosta de brincar ao colo fazendo de “cavalinho”, etc.?</a>
+            <div>
+              <input type="radio" id="1-sim" name="question1" value="sim">
+              <label for="1-sim">Sim</label>
+            </div>
+            <div>
+              <input type="radio" id="1-nao" name="question1" value="nao">
+              <label for="1-nao">Não</label>
+            </div>
+        </fieldset>
+
+        <fieldset>
+          <a>2 - Interessa-se pelas outras crianças?</a>
+            <div>
+              <input type="radio" id="2-sim" name="question2" value="sim">
+              <label for="2-sim">Sim</label>
+            </div>
+            <div>
+              <input type="radio" id="2-nao" name="question2" value="nao">
+              <label for="2-nao">Não</label>
+            </div>
+        </fieldset>
+      </form>
+    </section>
+
+    <section>
+      <button onclick="checkResults()">Enviar</button>
+    </section>
+
+    <section>
+      <div id="result"></div>
+    </section>
+
+  </body>
+</html>
