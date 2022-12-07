@@ -110,6 +110,7 @@ function checkResults() {
   checkQuestion(document.getElementsByName('question23'), 23);
 
   printTotalFails();
+  setFocusOnResult();
 }
 
 function resetTotalFails() {
@@ -136,11 +137,15 @@ function checkQuestion(option, failsListPosition) {
 function isRadioChecked(inputName) {
   let input = document.getElementsByName(inputName);
 
-  input.forEach(radio => {
+  for (const radio of input) {
     if(radio.checked) {
       return true;
     }
-  });
+  }
 
   return false;
+}
+
+function setFocusOnResult() {
+  document.getElementById("result").scrollIntoView();
 }
