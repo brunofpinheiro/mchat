@@ -5,6 +5,83 @@ const failsList = new Array('nao', 'nao', 'nao', 'nao', 'nao',
                             'nao', 'sim', 'nao');
 let totalFails = 0;
 
+function validateForm() {
+  let alertMessage = 'Campos obrigatórios não preenchidos!';
+
+  if (!isRadioChecked('question1')) {
+    alert(alertMessage);
+    return;
+  } else if (!isRadioChecked('question2')) {
+    alert(alertMessage);
+    return;
+  } else if (!isRadioChecked('question3')) {
+    alert(alertMessage);
+    return;
+  } else if (!isRadioChecked('question4')) {
+    alert(alertMessage);
+    return;
+  } else if (!isRadioChecked('question5')) {
+    alert(alertMessage);
+    return;
+  } else if (!isRadioChecked('question6')) {
+    alert(alertMessage);
+    return;
+  } else if (!isRadioChecked('question7')) {
+    alert(alertMessage);
+    return;
+  } else if (!isRadioChecked('question8')) {
+    alert(alertMessage);
+    return;
+  } else if (!isRadioChecked('question9')) {
+    alert(alertMessage);
+    return;
+  } else if (!isRadioChecked('question10')) {
+    alert(alertMessage);
+    return;
+  } else if (!isRadioChecked('question11')) {
+    alert(alertMessage);
+    return;
+  } else if (!isRadioChecked('question12')) {
+    alert(alertMessage);
+    return;
+  } else if (!isRadioChecked('question13')) {
+    alert(alertMessage);
+    return;
+  } else if (!isRadioChecked('question14')) {
+    alert(alertMessage);
+    return;
+  } else if (!isRadioChecked('question15')) {
+    alert(alertMessage);
+    return;
+  } else if (!isRadioChecked('question16')) {
+    alert(alertMessage);
+    return;
+  } else if (!isRadioChecked('question17')) {
+    alert(alertMessage);
+    return;
+  } else if (!isRadioChecked('question18')) {
+    alert(alertMessage);
+    return;
+  } else if (!isRadioChecked('question19')) {
+    alert(alertMessage);
+    return;
+  } else if (!isRadioChecked('question20')) {
+    alert(alertMessage);
+    return;
+  } else if (!isRadioChecked('question21')) {
+    alert(alertMessage);
+    return;
+  } else if (!isRadioChecked('question22')) {
+    alert(alertMessage);
+    return;
+  } else if (!isRadioChecked('question23')) {
+    alert(alertMessage);
+    return;
+  }
+
+  checkResults();
+}
+
 function checkResults() {
   resetTotalFails();
 
@@ -54,4 +131,16 @@ function checkQuestion(option, failsListPosition) {
       }
     }
   }
+}
+
+function isRadioChecked(inputName) {
+  let input = document.getElementsByName(inputName);
+
+  input.forEach(radio => {
+    if(radio.checked) {
+      return true;
+    }
+  });
+
+  return false;
 }
